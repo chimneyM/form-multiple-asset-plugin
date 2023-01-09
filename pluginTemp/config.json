@@ -1,0 +1,15 @@
+{
+  "id": "4519b44f-8f66-47ca-bdbf-75d655206b47-log",
+  "type": "reporting",
+  "main": "main.683b47be.js",
+  "version": "2",
+  "props": {
+    "styleArr": "[\"title\",\"height\",\"key\", \"eventCenterConfig\"]",
+    "columnStyle": "{title:'自定义'}",
+    "componentAttributes": "{\"style\":[\"title\",\"height\"],\"data\":[\"key\"],\"interaction\":[\"eventCenterConfig\"]}",
+    "assetColumnList": "[{\"col_name\":\"自定义\",\"col_datatype\":0}]",
+    "canSelectOtherAsset": true
+  },
+  "requirement-number": "需求编号",
+  "requirement-name": "需求名称"
+}
