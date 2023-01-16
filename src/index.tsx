@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import styled from "styled-components";
-// import { ResponseDataHoc } from "@sd-ui/custom-plugin";  // 响应式能力
+import { ResponseDataHoc } from "@sd-ui/custom-plugin";  // 响应式能力
 
 // type ComponentType = "set" | "add" | "child" | "table" | "preview";
 
@@ -99,13 +99,13 @@ if (process.env.NODE_ENV !== "production") {
   window.CUSTOM_PLUGIN.set(
     process.env.CUSTOM_PLUGIN_ID,
     (dom: any, props: any, context: any, eventBus: any) => {
-      // const pluginProps = {
-      //   props,
-      //   context,
-      //   eventBus,
-      // };
-      ReactDOM.render(<App {...context} {...props} />, dom);
-      // ReactDOM.render(ResponseDataHoc(pluginProps)(App), dom); // 响应式能力
+      const pluginProps = {
+        props,
+        context,
+        eventBus,
+      };
+      // ReactDOM.render(<App {...context} {...props} />, dom);
+      ReactDOM.render(ResponseDataHoc(pluginProps)(App), dom); // 响应式能力
     }
   );
 }

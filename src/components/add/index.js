@@ -20,6 +20,10 @@ const Add = ({
   const [configuration, setConfiguration] = useState({});
 
   useEffect(() => {
+    setState(data)
+  }, [data])
+
+  useEffect(() => {
     try {
       setConfiguration(JSON.parse(propsConfiguration));
     } catch (error) {

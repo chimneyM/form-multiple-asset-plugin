@@ -98,6 +98,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "ahooks": "^2.10.12",
+    "ahooks-v2": "^2.10.15",
     "antd": "^4.15.0",
     "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
@@ -169,6 +170,7 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "devDependencies": {
+    "@sd-ui/custom-plugin": "^6.0.1",
     "@types/node": "^18.11.18",
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
@@ -186,6 +188,7 @@
   },
   "peerDependencies": {
     "react": ">=16.9.0",
-    "react-dom": ">=16.9.0"
+    "react-dom": ">=16.9.0",
+    "@sd-ui/custom-plugin": "^6.0.1"
   }
 }
