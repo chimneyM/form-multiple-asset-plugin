@@ -1,10 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Input } from "antd";
+import { Select } from "antd";
 
 import useDelegator from "../../UseDelegator";
 import eventActionDefine from "../../msgCompConfig";
 import { getThemeStyle } from "../themeColor";
+const { Option } = Select;
 
 const Add = ({
   data,
@@ -71,18 +72,25 @@ const Add = ({
   );
 
   return (
-    <Input
+    <Select 
       style={getThemeStyle(formConfig.theme)}
-      value={state}
-      defaultValue={data}
-      onChange={(e) => {
-        onChange(e.target.value);
-        triggerEventCenter(e.target.value);
-        state2.current = e.target.value;
-        setState(e.target.value);
+      value={state ? Array.isArray(state) ? state : JSON.parse(state) : []}
+      defaultValue={data ? Array.isArray(data) ? state:JSON.parse(data) : []}
+      mode="multiple"
+      allowClear
+      onChange={(value) => {
+        const str = JSON.stringify(value)
+        onChange(str);
+        triggerEventCenter(str);
+        state2.current = str;
+        setState(str);
       }}
       {...configuration}
-    />
+    >
+      <Option value="1">选项1</Option>
+      <Option value="2">选项2</Option>
+      <Option value="3">选项3</Option>
+    </Select>
   );
 };
 

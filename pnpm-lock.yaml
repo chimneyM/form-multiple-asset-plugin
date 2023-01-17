@@ -99,7 +99,6 @@ dependencies:
   '@babel/core': 7.12.3
   '@babel/runtime': 7.20.7
   '@pmmmwh/react-refresh-webpack-plugin': 0.4.3_t4ezke4netssl24gycl5qjajya
-  '@sd-ui/custom-plugin': 6.0.1_tywj7vl3ctlhmvsgujrekekznu
   '@svgr/webpack': 5.5.0
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 11.2.7_wcqkhtmu7mswc6yz4uyexck3ty
@@ -177,6 +176,7 @@ dependencies:
   workbox-webpack-plugin: 5.1.4_webpack@4.44.2
 
 devDependencies:
+  '@sd-ui/custom-plugin': 6.0.1_tywj7vl3ctlhmvsgujrekekznu
   '@types/node': 18.11.18
   '@types/react': 17.0.52
   '@types/react-dom': 17.0.18
@@ -206,7 +206,6 @@ packages:
       lodash.debounce: 4.0.8
       lodash.throttle: 4.1.1
       react: 16.14.0
-    dev: false
 
   /@ampproject/remapping/2.2.0:
     resolution: {integrity: sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w==}
@@ -3987,7 +3986,7 @@ packages:
       react-dom: 16.14.0_react@16.14.0
     transitivePeerDependencies:
       - debug
-    dev: false
+    dev: true
 
   /@sd-ui/message-center/2.1.0_wcqkhtmu7mswc6yz4uyexck3ty:
     resolution: {integrity: sha512-xykWqQ7aU8h8XickSqCGm4tnbbEf90nKHRd4e6UMiY80BpTuISZuguFj/TLHcoxf/mFe9a5Xps/vrpw8DNWWnQ==}
@@ -3997,7 +3996,7 @@ packages:
     dependencies:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
-    dev: false
+    dev: true
 
   /@sd/core-instance/0.1.5:
     resolution: {integrity: sha512-DLq6lmRpf18T7P1KHvvm7zD9+oayqjLEaLOGMZEO/TJaW9zeahFDhiO9WJxVtHhh9oTADgJ3abry+KB2YOsVsg==}
@@ -4008,7 +4007,7 @@ packages:
       querystringify: 2.2.0
     transitivePeerDependencies:
       - debug
-    dev: false
+    dev: true
 
   /@sd/request/2.1.4:
     resolution: {integrity: sha512-05bSRNo7yVZLm5rdjt6CE3lZ2mhGe98NeO+ApNdGShDuw34wUVPLv6UqBQZ498rWNTjvK/bsavBDCLe9WdRDJQ==}
@@ -4020,7 +4019,7 @@ packages:
       querystringify: 2.0.0
     transitivePeerDependencies:
       - debug
-    dev: false
+    dev: true
 
   /@sinclair/typebox/0.24.51:
     resolution: {integrity: sha512-1P1OROm/rdubP5aFDSZQILU0vrLCJ4fvHt6EoqHEM+2D/G5MK3bIaymUKLit8Js9gbns5UyJnkP/TZROLw4tUA==}
@@ -4327,7 +4326,6 @@ packages:
 
   /@types/js-cookie/2.2.7:
     resolution: {integrity: sha1-ImqeMWgINaYYjoh/OYjmDATT9qM=}
-    dev: false
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
@@ -5381,7 +5379,6 @@ packages:
       react: 16.14.0
       resize-observer-polyfill: 1.5.1
       screenfull: 5.2.0
-    dev: false
 
   /ahooks/2.10.14_react@16.14.0:
     resolution: {integrity: sha512-axWa7VoAgu7bxA56dDl0CXW4rvaQmDBiov/d3tAy0x1YNYywYMKokL8TdLgJ5zO/oXGiWmG7BxlGOQGkqE/zkQ==}
@@ -5881,7 +5878,7 @@ packages:
       follow-redirects: 1.15.2
     transitivePeerDependencies:
       - debug
-    dev: false
+    dev: true
 
   /axobject-query/2.2.0:
     resolution: {integrity: sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==}
@@ -7854,7 +7851,6 @@ packages:
 
   /dayjs/1.11.7:
     resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
-    dev: false
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -9583,7 +9579,7 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-    dev: false
+    dev: true
 
   /follow-redirects/1.15.2_debug@4.3.4:
     resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
@@ -10896,7 +10892,6 @@ packages:
 
   /intersection-observer/0.7.0:
     resolution: {integrity: sha512-Id0Fij0HsB/vKWGeBe9PxeY45ttRiBmhFyyt/geBdDHBYNctMRTE3dC1U3ujzz3lap+hVXlEcVaB56kZP/eEUg==}
-    dev: false
 
   /ip-regex/2.1.0:
     resolution: {integrity: sha1-+ni/XS5pE8kRzp+BnuUUa7bYROk=}
@@ -12059,7 +12054,6 @@ packages:
 
   /js-cookie/2.2.1:
     resolution: {integrity: sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==}
-    dev: false
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -12475,15 +12469,13 @@ packages:
 
   /lodash.clonedeep/4.5.0:
     resolution: {integrity: sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=}
-    dev: false
+    dev: true
 
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha1-gteb/zCmfEAF/9XiUVMArZyk168=}
-    dev: false
 
   /lodash.isequal/4.5.0:
     resolution: {integrity: sha1-QVxEePK8wwEgwizhDtMib30+GOA=}
-    dev: false
 
   /lodash.ismatch/4.4.0:
     resolution: {integrity: sha1-dWy1FQyjum8RCFp4hJZF8Yj4Xzc=}
@@ -15408,7 +15400,7 @@ packages:
 
   /querystringify/2.0.0:
     resolution: {integrity: sha512-eTPo5t/4bgaMNZxyjWx6N2a6AuE0mq51KWvpc7nU/MAqixcI6v6KrGUKES0HaomdnolQBBXU/++X6/QQ9KL4tw==}
-    dev: false
+    dev: true
 
   /querystringify/2.2.0:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
@@ -16981,7 +16973,6 @@ packages:
   /screenfull/5.2.0:
     resolution: {integrity: sha1-ZTPVJNMGIfwSg7lpIUbz8TqT0bo=}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /scroll-into-view-if-needed/2.2.31:
     resolution: {integrity: sha512-dGCXy99wZQivjmjIqihaBQNjryrz5rueJY7eHfTdyWEiR4ttYpsajb14rn9s5d4DY4EcY6+4+U/maARBXJedkA==}

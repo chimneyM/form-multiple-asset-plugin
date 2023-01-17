@@ -1,20 +1,18 @@
 import React, { useRef, useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Input } from "antd";
+import { Select } from "antd";
 
 import useDelegator from "../../UseDelegator";
 import eventActionDefine from "../../msgCompConfig";
 import { getThemeStyle } from "../themeColor";
+const { Option } = Select;
 
-const Child = ({
+const Add = ({
   data,
   onChange,
   formConfig,
   component,
   configuration: propsConfiguration,
-  theme,
-  child_id,
-  index,
   eventCenter,
   componentCenter,
 }) => {
@@ -23,8 +21,11 @@ const Child = ({
   const [configuration, setConfiguration] = useState({});
 
   useEffect(() => {
+    setState(data)
+  }, [data])
+
+  useEffect(() => {
     try {
-      console.log(propsConfiguration);
       setConfiguration(JSON.parse(propsConfiguration));
     } catch (error) {
       console.error("configuration解析错误", error);
@@ -32,14 +33,13 @@ const Child = ({
   }, []);
 
   const triggerEventCenter = async (targetValue) => {
-    await window.eventCenter.triggerEventNew({
+    await eventCenter.triggerEventNew({
       objectId: formConfig?.id,
       componentId: component.id,
       type: "report",
       event: "change",
       payload: {
         value: targetValue,
-        childIndex: index,
       },
     });
   };
@@ -66,30 +66,37 @@ const Child = ({
     { Event_Center_getName, do_EventCenter_getValue, do_EventCenter_setValue },
     eventActionDefine,
     formConfig?.id,
-    child_id,
-    index,
+    null,
+    -1,
     { eventCenter, componentCenter }
   );
 
   return (
-    <Input
+    <Select 
       style={getThemeStyle(formConfig.theme)}
-      value={state}
-      defaultValue={data}
-      onChange={(e) => {
-        onChange(e.target.value);
-        triggerEventCenter(e.target.value);
-        state2.current = e.target.value;
-        setState(e.target.value);
+      value={state ? Array.isArray(state) ? state : JSON.parse(state) : []}
+      defaultValue={data ? Array.isArray(data) ? state:JSON.parse(data) : []}
+      mode="multiple"
+      allowClear
+      onChange={(value) => {
+        const str =value
+        onChange(str);
+        triggerEventCenter(str);
+        state2.current = str;
+        setState(str);
       }}
       {...configuration}
-    />
+    >
+      <Option value="1">选项1</Option>
+      <Option value="2">选项2</Option>
+      <Option value="3">选项3</Option>
+    </Select>
   );
 };
 
-Child.propTypes = {
+Add.propTypes = {
   data: PropTypes.string,
   onChange: PropTypes.func,
 };
 
-export default Child;
+export default Add;
